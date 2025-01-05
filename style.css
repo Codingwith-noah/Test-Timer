@@ -1,0 +1,68 @@
+@font-face{
+    font-family: clock;
+    src: url(BeautifulPoliceOfficer-rvv8x.ttf);
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: hsl(0, 0%, 40%);
+    font-family: Arial, Helvetica, sans-serif;
+    gap: 20px;
+}
+
+#input{
+    width: 40%;
+    height: 150px;
+    background-color: hsl(0, 0%, 50%);
+    border: none;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 35px;
+}
+
+#input input{
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    border: none;
+
+}
+
+#input input:focus {
+    outline: none;
+    border: none;
+}
+
+button[type="submit"]{
+    width: 120px;
+    height: 60px;
+    border: none;
+}
+
+#timer{
+    width: 60%;
+    height: 30%;
+    background: black;
+    border: none;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 35px;
+}
+
+#timer p{
+    font-size: 120px;
+    color: green;
+    font-family: clock;
+    font-weight: bold;
+}

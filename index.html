@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="input">
+        <input type="text" placeholder="HH" class="hours" />
+        <input type="text" placeholder="MM" class="minutes" />
+        <input type="text" placeholder="SS" class="seconds" />       
+        <br>
+        <button type="submit" content="Submit">Start Timer</button>
+    </div>
+    <div id="timer">
+        <p id="timer-txt">00:00:00</p>
+    </div>
+
+    <audio id="alarm-sound" src="timeroff.mp3"></audio>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
