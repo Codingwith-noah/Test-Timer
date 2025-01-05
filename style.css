@@ -1,4 +1,4 @@
-@font-face{
+@font-face {
     font-family: clock;
     src: url(BeautifulPoliceOfficer-rvv8x.ttf);
 }
@@ -13,10 +13,13 @@ body {
     background: hsl(0, 0%, 40%);
     font-family: Arial, Helvetica, sans-serif;
     gap: 20px;
+    padding: 10px;
 }
 
-#input{
-    width: 40%;
+/* Input Section */
+#input {
+    width: 80%;
+    max-width: 400px; /* Limit width for large screens */
     height: 150px;
     background-color: hsl(0, 0%, 50%);
     border: none;
@@ -28,12 +31,12 @@ body {
     gap: 35px;
 }
 
-#input input{
+#input input {
     width: 40px;
     height: 40px;
     text-align: center;
     border: none;
-
+    font-size: 1.5rem;
 }
 
 #input input:focus {
@@ -41,15 +44,27 @@ body {
     border: none;
 }
 
-button[type="submit"]{
+/* Submit Button */
+button[type="submit"] {
     width: 120px;
     height: 60px;
     border: none;
+    background-color: hsl(120, 100%, 50%);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
 }
 
-#timer{
-    width: 60%;
-    height: 30%;
+button[type="submit"]:hover {
+    background-color: hsl(120, 100%, 40%);
+}
+
+/* Timer Display Section */
+#timer {
+    width: 80%;
+    max-width: 500px; /* Limit width for large screens */
+    height: 200px;
     background: black;
     border: none;
     border-radius: 8px;
@@ -60,9 +75,75 @@ button[type="submit"]{
     gap: 35px;
 }
 
-#timer p{
+#timer p {
     font-size: 120px;
     color: green;
     font-family: clock;
     font-weight: bold;
+}
+
+/* Media Queries for Responsiveness */
+
+/* For small screens (Phones) */
+@media (max-width: 600px) {
+    body {
+        gap: 10px;
+    }
+
+    #input {
+        flex-direction: column;
+        width: 90%;
+    }
+
+    #input input {
+        width: 60px;
+        height: 60px;
+        font-size: 2rem;
+    }
+
+    button[type="submit"] {
+        width: 100px;
+        height: 50px;
+    }
+
+    #timer p {
+        font-size: 80px;
+    }
+}
+
+/* For tablets (between 600px and 1024px) */
+@media (min-width: 601px) and (max-width: 1024px) {
+    #input {
+        width: 70%;
+    }
+
+    #input input {
+        width: 50px;
+        height: 50px;
+        font-size: 1.8rem;
+    }
+
+    button[type="submit"] {
+        width: 110px;
+        height: 55px;
+    }
+
+    #timer p {
+        font-size: 100px;
+    }
+}
+
+/* For large screens (Desktops and Laptops) */
+@media (min-width: 1025px) {
+    #input {
+        width: 40%;
+    }
+
+    #timer {
+        width: 60%;
+    }
+
+    #timer p {
+        font-size: 120px;
+    }
 }
